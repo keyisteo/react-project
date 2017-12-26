@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom'
 import Menu from './components/menu'
 import data from './data/recipes'
 import Summary from './components/summary'
-import StarRating from './components/StarRating'
-import Color from './components/AddColorForm'
+import App from './components/App'
 
 window.React = React
 
@@ -20,13 +19,7 @@ ReactDOM.render(
 
 
 ReactDOM.render(
-	<Color onNewColor={(title, color)=>{
-		console.log(`New New Color: ${title} ${color}`)
-	}}/>,
+	<App/>,
 	document.getElementById('color')
 	)
 
-ReactDOM.render(
-	<StarRating totalStars={7} starsSelected={3}/>,
-	document.getElementById('star-rating')
-	)
